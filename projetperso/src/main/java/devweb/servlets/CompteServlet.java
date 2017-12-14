@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import static javax.swing.JOptionPane.showMessageDialog;
+
 @WebServlet("/compte")
 public class CompteServlet extends GenericServlet {
 
@@ -30,12 +32,15 @@ public class CompteServlet extends GenericServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String pseudoX="";
+        req.getSession().setAttribute("utilisateurConnecte",pseudoX);
         try {
-            Membre deleteMembre = MembreLibrary.getInstance().deleteMembre();
-
-            // REDIRECT TO DETAIL FILM
+            Membre deleteMembre = MembreLibrary.getInstance().deleteMembre(pseudoX);
             resp.sendRedirect("accueil");
         } catch (IllegalArgumentException e) {
+            resp.sendRedirect("error");
+            showMessageDialog(null,"Erreur de suppression");
+            return;
         }
     }
 }

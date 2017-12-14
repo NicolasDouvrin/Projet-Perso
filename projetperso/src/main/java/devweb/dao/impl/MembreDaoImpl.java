@@ -79,9 +79,19 @@ public class MembreDaoImpl implements MembreDao{
     }
 
     @Override
-    public Membre deleteMembre() {
-        String query = "DELETE * FROM membre WHERE pseudo=utilisateurConnecte";
-
+    public Membre deleteMembre(String pseudo) {
+        String query = "DELETE * FROM membre WHERE pseudo=?";
+        try (Connection connection = DataSourceProvider.getDataSource().getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, pseudo);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return null;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
