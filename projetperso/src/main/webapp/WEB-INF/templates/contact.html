@@ -1,0 +1,53 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Contact Xtrem-Hardware </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+</head>
+
+<body>
+
+
+<header th:replace="~{fragment::header}">
+</header>
+
+<nav th:replace="~{fragment::nav}">
+</nav>
+
+<!-- Formulaire de contact -->
+
+<fieldset class="champs">
+
+    <h2>Contactez nous</h2>
+
+    <form method="post" action="mailto:nicolas.douvrin@hei.yncrea.fr">
+        <div class="contact">
+
+            <h4><label for="id_name">Votre nom:</label></h4>
+            <input required id="id_name" maxlength="100" name="name" type="text" />
+
+            <h4><label for="id_name">Votre pseudo:</label></h4>
+            <input required id="id_pseudo" maxlength="10" name="pseudo" type="text" />
+
+            <h4><label for="id_email">Votre adresse mail:</label></h4>
+            <input required id="id_email" maxlength="200" name="email" type="text" />
+
+            <h4><label for="id_body">Votre message:</label></h4>
+            <textarea required cols="40" id="id_body" name="body" rows="10">
+            </textarea>
+        </div>
+    </form>
+</fieldset>
+
+<div th:replace="~{fragment::navbottom}">
+</div>
+
+
+
+</body>
+
+<footer th:replace="~{fragment::footer}">
+</footer>
+
+</html>

@@ -1,0 +1,55 @@
+
+/*** BASIQUES ***/
+
+p{	
+	margin-right: 50px;
+	margin-left: 50px;
+}
+h3, p{
+	position: relative;
+}
+h3{
+	margin-left: 45px;
+	padding-bottom: 10px;
+}
+
+/*** CORPS PRINCIPAL ***/
+
+.texte{
+	font-size: 120%;
+	display: inline;
+	position: relative;
+}
+.texte img{
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	text-align: center;
+}
+.bloc1{
+	position: relative;
+	float:right;
+	text-align: center;
+	padding: 10px;
+	list-style-type: none;
+	width: 50%;
+}
+.bloc img,.bloc1 img{
+	width: 30%;
+	height: auto;
+}
+#gauche{
+	text-align: left;
+}
+.bloc{
+	padding: 10px;
+	text-align: center;
+}
+.bloc p,.bloc h3,.bloc ul,.bloc1 ul{
+	text-align: left;
+}
+img #attention{
+	text-align: center;
+}
+
+

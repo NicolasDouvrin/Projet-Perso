@@ -1,0 +1,79 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments</title>
+</head>
+<body>
+
+<div th:fragment="header">
+    <header>
+        <div class="pcheader">
+            <img src="../img/titre.png">
+            <ul class="user-nav">
+            <li><a href="../login"><b>Login</b></a></li>
+            <li><a href="../register"><b>Register</b></a></li>
+            </ul>
+        </div>
+    </header>
+</div>
+
+<div th:fragment="nav">
+<nav class="nav">
+    <ul>
+        <li><a href="accueil">ACCUEIL</a></li>
+        <li><a href="guide">GUIDE DE MONTAGE</a></li>
+        <li><a href="config">MA CONFIG</a></li>
+        <li><a href="photos">PHOTOS</a></li>
+        <li><a href="contact">CONTACT</a></li>
+    </ul>
+</nav>
+</div>
+
+<div class="navbottom" th:fragment="navbottom">
+    <br/>
+    <table style="margin-right:auto; margin-left:auto;">
+        <tbody>
+        <tr>
+            <td colspan="3"></td>
+            <td style="text-align:center;">
+                <input type="image" id="next" name="submit" src="../img/valider.png" width="80px" />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div th:fragment="footer">
+    <footer>
+        <div class="bas-page">
+
+            <ul class="footer-nav">
+                <h4>Sections</h4>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="guide">Guide de Montage</a></li>
+                <li><a href="config">Configuration</a></li>
+                <li><a href="photos">Album Photos</a></li>
+            </ul>
+
+            <ul class="footer-nav">
+                <h4> A Propos</h4>
+                <li><a href="accueil">About</a></li>
+                <li><a href="contact">Contact </a></li>
+            </ul>
+
+            <ul class="footer-nav">
+                <h4>Rejoins Nous </h4>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://www.youtube.com">YouTube</a></li>
+            </ul>
+
+            <div class="footer-branding">
+                <div class="copyright-notice">2017 Xtrem Hardware.  All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Contact Xtrem-Hardware </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+</head>
+
+<body>
+
+
+<header th:replace="~{fragment::header}">
+</header>
+
+<nav th:replace="~{fragment::nav}">
+</nav>
+
+<div class="config">
+    <div class="profil" >
+        <h2 id="profil" >Liste des Membre</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID Membre</th>
+                <th>Pseudo</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="membre : ${membresList}">
+                <td th:text="${membre.id}">1</td>
+                <td th:text="${membre.pseudo}">Kevin59</td>
+                <td th:text="${membre.email}">bill.boquer@hei.fr</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div th:replace="~{fragment::navbottom}">
+</div>
+
+</body>
+
+<footer th:replace="~{fragment::footer}">
+</footer>
+
+</html>

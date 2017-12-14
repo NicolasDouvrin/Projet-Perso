@@ -1,0 +1,334 @@
+
+/******* ENTETE ********/
+
+
+header h1{
+    text-align: center;
+}
+header ul,header li, #form1{
+    position: relative;
+    display: inline;
+    text-align: center;
+    margin-right:10px;
+    margin-bottom: 10px;
+    border:10px;
+}
+header a{
+    border: 4px solid black;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: white;
+    padding: 3px;
+    display: inline;
+    right:15px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+
+}
+header img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 200px;
+}
+
+.nav{
+    margin-top: 10px;
+
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: auto;
+    overflow: hidden;
+    background-color: #333;
+}
+.nav li {
+    display: inline-block;
+    text-align: center;
+}
+.nav li a {
+    font-style: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav li a:hover {
+    background-color: deepskyblue;
+}
+
+/******* ARTICLES ********/
+
+.guides{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin: 20px;
+}
+.guides h2{
+    text-align: center;
+}
+.guides a{
+    text-align: center;
+}
+
+.intro, .derniere, .populaire{
+    float:left;
+    margin: 10px 10px 10px 10px;
+    padding:5px;
+    width:30%;
+}
+.intro{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.populaire{
+    margin-left:30px;
+    padding-right:50px;
+    max-width: 400px;
+}
+.intro a{
+    border: solid;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: absolute;
+}
+.derniere{
+    border: solid;
+    border-radius: 15px;
+    border-width: 3px;
+    background-color: dimgray;
+    text-align: center;
+}
+.derniere img{
+    width:70%;
+    height:auto;
+}
+.derniere h4{
+    color: white;
+    border: 2px solid white;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.derniere table{
+    margin: auto;
+}
+#prix{
+    text-align: right;
+}
+
+/******* PHOTOS *******/
+
+.apercu{
+    position: relative;
+    margin: 10px;
+    text-align: center;
+}
+.apercu h2{
+    text-align: left;
+    margin-bottom: 50px;
+}
+.apercu img{
+    width: 300px;
+    height: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border:solid;
+    border-width: 2px;
+    background-position: center center;
+}
+.apercu a{
+        color: white;
+}
+.photo1, .photo2, .photo3{
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    left:0%;
+}
+.photos{
+    display: inline;
+    text-align: center;
+}
+
+
+
+/******* FOOTER *******/
+
+footer {
+    position: absolute;
+    border-top: 1px solid #e3e3e3;
+    background-color: grey;
+    width: 100%;
+    clear: both;
+    font-size: 20px;
+}
+footer .copyright-notice{
+    margin-top: 170px;
+    text-align: right;
+    color: black;
+}
+footer .footer-branding {
+    width: 35%;
+    float: left;
+    font-size: 15px;
+}
+footer .footer-nav {
+    float: left;
+    width: 14%;
+    margin-right: 2%;
+}
+footer .footer-nav li {
+    font-size: 15px;
+}
+footer .footer-nav a {
+    border-left: 1px solid #e3e3e3;
+    padding: 4px 0 4px 12px;
+    display: block;
+    color: #252835;
+}
+footer .footer-nav a:hover {
+    color: white;
+    border-left: 1px solid #252835;
+}
+footer h4{
+    color: white;
+}
+
+.bas-page {
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%; 
+}
+.bas-page:after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+/******* BASIQUES ********/
+
+body{
+    color: white;
+    background-color: black;
+}
+.pcheader h1{
+    color: black;
+}
+h1{
+    color: skyblue;
+}
+h2{
+    color: firebrick;
+}
+h4{
+    color: blueviolet;
+}
+h3{
+    color: skyblue;
+}
+
+
+
+/********* CSS AUTRES PAGES (photos.html/error.html/config.htmls) *********/
+
+
+
+/*photos.html*/
+
+.black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index:1;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.white_content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    padding: 16px;
+    border: 16px solid gray;
+    background-color: black;
+    z-index:1002;
+}
+.white_content a{
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+}
+.photos img{
+    width: 300px;
+    height: 250px;
+}
+.photos{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+#zoom{
+    width:700px;
+    height: auto;
+}
+
+/* error.html */
+#soon{
+    text-align: center;
+    margin:100px;
+}
+
+
+/* config.html */
+.config{
+    background-image: url(../img/fond.jpg);
+    padding-bottom: 100px;
+}
+
+.profil{
+    position: relative;
+    background-color: dimgray;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    margin-right: 30%;
+    margin-left: 30%;
+    border-radius: 15px;
+    border:3px solid white;
+    text-align: center;
+    font-size: 120%;
+}
+.profil a{
+    color: white;
+}
+.profil h2{
+    border: 3px solid white;
+    margin-top:50px;
+    margin-bottom: 50px;
+    margin-left: 35%;
+    margin-right:35%;
+    color: white;
+}
+.profil select{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 400px;
+    height: 30px;
+    font-size:100%;
+}
+
