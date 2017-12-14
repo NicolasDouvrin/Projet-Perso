@@ -12,7 +12,7 @@ public class MembreDaoImpl implements MembreDao{
 
     @Override
     public List<Membre> listMembres(){
-        String query = "SELECT * FROM membre ORDER BY nom;";
+        String query = "SELECT * FROM membre ORDER BY id;";
         List<Membre> listofMembres = new ArrayList<>();
         try (
                 Connection connection = DataSourceProvider.getDataSource().getConnection();
@@ -81,17 +81,7 @@ public class MembreDaoImpl implements MembreDao{
     @Override
     public Membre deleteMembre() {
         String query = "DELETE * FROM membre WHERE pseudo=utilisateurConnecte";
-        try (Connection connection = DataSourceProvider.getDataSource().getConnection();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, pseudo);
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
-                    return new String(resultSet.getString("mdp"));
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
         return null;
     }
 

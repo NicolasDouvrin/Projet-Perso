@@ -36,5 +36,6 @@ public class CompteServlet extends GenericServlet {
             // REDIRECT TO DETAIL FILM
             resp.sendRedirect("accueil");
         } catch (IllegalArgumentException e) {
+        }
     }
 }
